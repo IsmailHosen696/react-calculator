@@ -1,17 +1,19 @@
 import ActionButton from './components/ActionButton';
 import Button from './components/Button';
 import OperatorsButton from './components/OperatorsButton';
+import { useCalculate } from './hooks/useCalculate';
 
 function App() {
+  const { state } = useCalculate();
   return (
     <div className="calculator">
       <div className="calculator_body">
         <div className="display">
-          <div className='last_number'>4545+ </div>
-          <div className='new_number'>12</div>
+          <div className='last_number'>{state.prevNumber} {state.operator}</div>
+          <div className='new_number'>{state.newNumber ? state.newNumber : 0}</div>
         </div>
         <div className="button">
-          <ActionButton actionBtn='Ac' />
+          <ActionButton actionBtn='AC' />
           <ActionButton actionBtn='C' />
           <OperatorsButton operators='÷' />
           <Button digit='7' />
