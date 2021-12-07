@@ -1,4 +1,4 @@
-[the app live demo](https://practical-edison-febde9.netlify.app)
+[the app live demo](https://react-calculator-by-ismailhsn.netlify.app/)
 
 # Getting Started with Create React App
 
